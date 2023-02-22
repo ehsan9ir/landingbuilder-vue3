@@ -12,9 +12,9 @@
                     <router-link :to="{name: 'Login'}" class="btn btn-ghost">
                         Login
                     </router-link>
-                    <router-link :to="{name: 'Register'}" class="btn btn-secondary btn-outline">
+                    <!--<router-link :to="{name: 'Register'}" class="btn btn-secondary btn-outline">
                         Sign up
-                    </router-link>
+                    </router-link>-->
                 </div>
             </div>
         </section>
@@ -33,10 +33,10 @@
                     It's never been easier to build a landing page to sell your digital products.
                 </p>
                 <div class="relative flex flex-col sm:flex-row sm:space-x-4">
-                    <router-link :to="{name: 'Register'}" class="btn btn-primary btn-lg">
+                    <!--<router-link :to="{name: 'Register'}" class="btn btn-primary btn-lg">
                         Try It Free
                         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 ml-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                    </router-link>
+                    </router-link>-->
                     <a href="#_" class="btn btn-lg btn-accent">
                         Learn More
                     </a>
@@ -246,9 +246,9 @@
                     Use our award-winning tools to help you maximize your profits. We've uncovered the correct recipe for converting visitors into customers.
                 </p>
                 <div class="flex justify-center mt-8 space-x-3">
-                    <router-link :to="{name: 'Register'}" class="btn btn-secondary btn-lg tracking-wider">
+                    <!--<router-link :to="{name: 'Register'}" class="btn btn-secondary btn-lg tracking-wider">
                         Try it for free now!
-                    </router-link>
+                    </router-link>-->
                 </div>
             </div>
         </section>

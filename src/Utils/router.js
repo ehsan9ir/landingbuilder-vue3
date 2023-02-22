@@ -3,7 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import Middleware from './middleware'
 
 import Login from '../Pages/Auth/Login.vue'
-import Register from '../Pages/Auth/Register.vue'
+// import Register from '../Pages/Auth/Register.vue'
 
 import App from '../Pages/App/App.vue'
 import Dashboard from '../Pages/App/Dashboard/Index.vue'
@@ -39,14 +39,14 @@ const routes = [
             return Middleware.guest(to, from, next)
         }
     },
-    {
-        path: '/register',
-        name: 'Register',
-        component: Register,
-        beforeEnter: (to, from, next) => {
-            return Middleware.guest(to, from, next)
-        }
-    },
+    // {
+    //     path: '/register',
+    //     name: 'Register',
+    //     component: Register,
+    //     beforeEnter: (to, from, next) => {
+    //         return Middleware.guest(to, from, next)
+    //     }
+    // },
 
     //
     // App routes

@@ -40,6 +40,6 @@ module.exports = {
     base: true,
     utils: true,
     logs: true,
-    rtl: false,
+    rtl: true,
   },
 }

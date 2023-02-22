@@ -1,9 +1,9 @@
 <template>
     <AppLayout>
         <div class="flex flex-col items-end md:flex-row md:justify-between md:items-center mb-8">
-            <h2 class="text-2xl font-normal text-gray-600">My landing pages</h2>
+            <h2 class="text-2xl font-normal text-gray-600">صفحات فرود</h2>
             <router-link to="/app/landing-pages/create" class="btn btn-primary">
-                New landing page
+              صفحه فرود جدید
             </router-link>
         </div>
         

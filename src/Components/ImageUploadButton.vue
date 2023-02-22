@@ -1,10 +1,10 @@
 <template>
     <button v-if="processing" disabled class="btn btn-primary disabled loading">
-        Uploading...
+        درحال ارسال...
     </button>
     <label v-else class="btn btn-primary">
+        <span class="ml-1">بارگذاری عکس</span>
         <Icon name="upload" styles="w-5 h-5"/>
-        <span class="ml-1">Upload an image</span>
         <input @input="upload" type="file" class="hidden"/>
     </label>
 </template>

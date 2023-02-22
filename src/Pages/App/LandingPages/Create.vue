@@ -1,7 +1,7 @@
 <template>
     <AppLayout>
         <div class="flex flex-col items-end md:flex-row md:justify-between md:items-center mb-8">
-            <h2 class="text-2xl font-normal text-gray-600">New landing page</h2>
+            <h2 class="text-2xl font-normal text-gray-600">صفحه فرود جدید</h2>
         </div>
         
         <div class="card card-bordered border-gray-200">
@@ -10,13 +10,13 @@
                     <div class="col-span-6">
                         <div class="form-control">
                             <label class="label">
-                                <span class="label-text">Name</span>
+                                <span class="label-text">نام</span>
                             </label> 
                             <input v-model="form.name" type="text" placeholder="My awesome ebook" class="input input-bordered text-base">
                         </div>
                     </div>
                     <div class="col-span-12 flex justify-end">
-                        <button @click="submit()" class="btn btn-primary">Create</button>
+                        <button @click="submit()" class="btn btn-primary">ایجاد</button>
                     </div>
                 </div>
             </div>

@@ -2,7 +2,7 @@
     <div>
         <Navbar/>
 
-        <div class="max-w-5xl mx-auto py-8 space-y-4">
+        <div class="max-w-5xl mx-auto py-8 space-y-4 px-5">
             <Alert/>
             <slot/>
         </div>

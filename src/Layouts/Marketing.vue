@@ -23,9 +23,9 @@
                 <router-link to="/login" class="btn btn-ghost">
                     Login
                 </router-link>
-                <router-link to="/register" class="btn btn-primary">
+                <!--<router-link to="/register" class="btn btn-primary">
                     Register
-                </router-link>
+                </router-link>-->
             </div>
         </div>
         <div class="max-w-6xl mx-auto">

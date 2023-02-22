@@ -1,8 +1,8 @@
 const Middleware = {
     auth: (to, from, next) => {
-        const isAuthenticated = localStorage.getItem('ez_landingpage_authenticated')
+        const isAuthenticated = !!localStorage.getItem('ez_landingpage_token')
         
-        if (isAuthenticated == 'true') {
+        if (isAuthenticated) {
             next()
         }
         else {
@@ -11,9 +11,9 @@ const Middleware = {
     },
 
     guest: (to, from, next) => {
-        const isAuthenticated = localStorage.getItem('ez_landingpage_authenticated')
+        const isAuthenticated = !!localStorage.getItem('ez_landingpage_token')
 
-        if ((to.name == 'Login' || to.name == 'Register') && isAuthenticated == 'true') {
+        if ((to.name == 'Login' || to.name == 'Register') && isAuthenticated) {
             next({ name: 'Dashboard' })
         }
         else {

@@ -1,7 +1,7 @@
 <template>
     <BuilderLayout>
-        <div class="lg:hidden">
-            Sorry, but we only support large screens as of now.
+        <div class="lg:hidden text-center py-5">
+          متأسفیم، اما ما در حال حاضر فقط از صفحه نمایش های بزرگ پشتیبانی می کنیم.
         </div>
         <div class="hidden lg:block">
 
@@ -16,32 +16,26 @@
                     <div class="p-0">
                         <div class="px-4 pt-4 gap-x-2 flex justify-end">
                             <a :href="'/app/preview/' + route.params.uuid + '/main'" target="_blank" class="btn btn-sm btn-success">
+                                <span class="ml-1 font-normal text-xs">پیش نمایش</span>
                                 <Icon styles="w-4 h-4" name="external-link"/>
-                                <span class="ml-1 font-normal text-xs">Preview</span>
                             </a>
 
-                            <button v-if="saving" class="btn btn-sm btn-info loading disabled">
-                                <span class="ml-1 font-normal text-xs">Saving...</span>
-                            </button>
-                            <button v-else @click="save()" class="btn btn-sm btn-info">
-                                <Icon styles="w-4 h-4" name="save"/>
-                                <span class="ml-1 font-normal text-xs">Save</span>
+                            <button @click="save()" class="btn btn-sm btn-info" :disabled="saving">
+                                <span class="ml-1 font-normal text-xs">ذخیره</span>
+                                <Icon styles="w-4 h-4" name="save" :loading="saving"/>
                             </button>
 
-                            <button v-if="publishing" class="btn btn-sm btn-error loading disabled">
-                                <span class="ml-1 font-normal text-xs">Publishing...</span>
-                            </button>
-                            <button v-else @click="publish()" class="btn btn-sm btn-error">
-                                <Icon styles="w-5 h-5" name="upload"/>
-                                <span class="ml-1 font-normal text-xs">Publish</span>
+                            <button @click="publish()" class="btn btn-sm btn-error" :disabled="publishing">
+                                <span class="ml-1 font-normal text-xs">انتشار</span>
+                                <Icon styles="w-5 h-5" name="upload" :loading="publishing"/>
                             </button>
                             <div class="btn btn-sm btn-info">
+                                <router-link to="/app" class="ml-1 font-normal text-xs">بستن ویرایشگر</router-link>
                                 <Icon styles="w-4 h-4" name="close"/>
-                                <router-link to="/app" class="ml-1 font-normal text-xs">Close editor</router-link>
                             </div>
                         </div>
                         <div class="p-4 block">
-                            <Draggable class="dragArea list-group" :list="draft" handle=".handle" group="blocks" item-key="uuid">
+                            <Draggable class="dragArea list-group min-h-[200px]" :list="draft" handle=".handle" group="blocks" item-key="uuid">
                                 <template #item="{ element, index }">
                                     <div class="list-group-item">
                                         <BlockWrapper :block="element" @delete="deleteBlock(index)"/>

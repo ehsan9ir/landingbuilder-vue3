@@ -2,6 +2,7 @@ import axios from 'axios'
 
 axios.defaults.withCredentials = true
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_BASE_URL
+axios.defaults.headers.Authorization = 'Bearer ' + localStorage.getItem('ez_landingpage_token')
 
 const Api = {
     fetchLandingPages: () => {
@@ -52,7 +53,7 @@ const Api = {
                     axios.post('/lb/login', credentials)
                         .then(response => {
                             if(response.status <= 204) {
-                                localStorage.setItem('ez_landingpage_authenticated', true)
+                                localStorage.setItem('ez_landingpage_token', response.data.plainTextToken)
                             }
 
                             log(response, 'POST - then - /login')
@@ -74,7 +75,7 @@ const Api = {
         return new Promise((resolve, reject) => {
             axios.post('/lb/logout')
                 .then(response => {
-                    localStorage.setItem('ez_landingpage_authenticated', false)
+                    localStorage.removeItem('ez_landingpage_token')
                     log(response, 'POST - then - /logout')
                     resolve(response)
                 })
@@ -92,7 +93,7 @@ const Api = {
                     axios.post('/register', data)
                         .then(response => {
                             if(response.status == 200) {
-                                localStorage.setItem('ez_landingpage_authenticated', true)
+                                localStorage.setItem('ez_landingpage_token', response.data.plainTextToken)
                             }
 
                             log(response, 'POST - then - /register')

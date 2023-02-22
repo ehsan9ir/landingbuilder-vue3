@@ -1,7 +1,7 @@
 <template>
     <AppLayout>
         <div class="flex flex-col items-end md:flex-row md:justify-between md:items-center mb-8">
-            <h2 class="text-2xl font-normal text-gray-600">Image Gallery</h2>
+            <h2 class="text-2xl font-normal text-gray-600">گالری</h2>
             <ImageUploadButton/>
         </div>
 
