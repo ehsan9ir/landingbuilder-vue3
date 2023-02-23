@@ -4,6 +4,30 @@ import { v4 as uuidv4 } from 'uuid'
 const groups = ref([
     {
         uuid: uuidv4(),
+        title: 'Header',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'Header',
+                model: 'image-left',
+                componentName: 'Header',
+                optionsComponentName: 'HeaderOptions',
+                description: 'Header',
+                thumbUrl: '/images/thumbs/v1/header/header.jpg',
+                data: {
+                    backgroundColor: '#3F2A6F',
+                    imageUrl: '/images/samples/v1/header/header.png',
+                    hasHeaderBottom: true,
+                    buttonText: 'ثبت نام و دریافت برنامه غذایی',
+                    buttonBackgroundColor: '#FF5757',
+                    buttonColor: '#FFFFFF',
+                    buttonLink: '#register',
+                }
+            }
+        ]
+    },
+    {
+        uuid: uuidv4(),
         title: 'Heroes',
         blocks: [
             {
