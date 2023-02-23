@@ -23,6 +23,8 @@
     import FAQCollapse from './FAQ/FAQCollapse.vue'
     import FAQList from './FAQ/FAQList.vue'
 
+    import Header from "./Header/Header.vue";
+
     export default {
         name: 'BlockPreviewer',
         components: {
@@ -39,6 +41,7 @@
             ChaptersCollapse,
             FAQCollapse,
             FAQList,
+            Header
         },
         props: {
             block: {
