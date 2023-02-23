@@ -79,10 +79,18 @@
     import Header from "./Header/Header.vue";
     import HeaderOptions from "./Header/HeaderOptions.vue";
 
+    import Leaders from "./Leaders/Leaders.vue";
+    import LeadersOptions from "./Leaders/LeadersOptions.vue";
+
     export default {
         name: 'BlockWrapper',
         emits: ['delete'],
         components: {
+            Header,
+            HeaderOptions,
+            Leaders,
+            LeadersOptions,
+
             Icon,
 
             HeroImageLeft,
@@ -118,11 +126,7 @@
             FAQCollapse,
             FAQCollapseOptions,
             FAQList,
-            FAQListOptions,
-
-            Header,
-            HeaderOptions
-
+            FAQListOptions
         },
         props: {
             block: {
