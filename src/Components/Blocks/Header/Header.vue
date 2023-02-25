@@ -1,6 +1,6 @@
 <template>
-    <div>
-      <div class="pb-3" :style="{backgroundColor: block.data.backgroundColor}">
+    <header block="header" :style="{ backgroundColor: block.data.mainBackgroundColor }">
+      <div class="pb-3" :style="{ backgroundColor: block.data.backgroundColor }">
         <img :src="block.data.imageUrl" class="w-80 block mx-auto mb-3" alt="header">
         <div class="text-center">
           <a class="btn"
@@ -21,7 +21,7 @@
           <rect width="375" height="71" :fill="block.data.backgroundColor"/>
         </g>
       </svg>
-    </div>
+    </header>
 </template>
 
 <script>

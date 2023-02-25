@@ -18,17 +18,16 @@
             </div>
         </div>
     </div>
-
     <teleport to="body">
         <div v-if="showDrawer" class="fixed top-0 left-0">
             <input :id="block.uuid" type="checkbox" class="drawer-toggle">
             <div class="drawer-side h-screen">
                 <label :for="block.uuid" class="drawer-overlay"></label>
-                <ul class="menu p-4 overflow-y-auto border-r-2 w-64 bg-base-100 text-base-content">
-                    <button @click="showDrawer = false" class="btn btn-sm btn-active mt-2">بستن</button>
-                    <p class="my-4 font-bold uppercase">گزینه های بلاک</p>
-                    <component :is="block.optionsComponentName" v-model="block"/>
-                </ul>
+                <div class="menu p-4 overflow-y-auto border-r-2 bg-base-100 text-base-content block w-72">
+                  <button @click="showDrawer = false" class="btn btn-sm btn-active mt-2 btn-block">بستن</button>
+                  <p class="my-4 font-bold uppercase">گزینه های بلاک</p>
+                  <component :is="block.optionsComponentName" v-model="block"/>
+                </div>
             </div>
         </div>
     </teleport>
@@ -79,10 +78,18 @@
     import Header from "./Header/Header.vue";
     import HeaderOptions from "./Header/HeaderOptions.vue";
 
+    import Leaders from "./Leaders/Leaders.vue";
+    import LeadersOptions from "./Leaders/LeadersOptions.vue";
+
     export default {
         name: 'BlockWrapper',
         emits: ['delete'],
         components: {
+            Header,
+            HeaderOptions,
+            Leaders,
+            LeadersOptions,
+
             Icon,
 
             HeroImageLeft,
@@ -118,11 +125,7 @@
             FAQCollapse,
             FAQCollapseOptions,
             FAQList,
-            FAQListOptions,
-
-            Header,
-            HeaderOptions
-
+            FAQListOptions
         },
         props: {
             block: {

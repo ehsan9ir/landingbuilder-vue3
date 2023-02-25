@@ -4,6 +4,12 @@
     <div class="form-control">
       <label class="cursor-pointer label flex justify-start">
         <span class="label-text text-base ml-auto">رنگ پس زمینه</span>
+        <input v-model="block.data.mainBackgroundColor" type="color" class="">
+      </label>
+    </div>
+    <div class="form-control">
+      <label class="cursor-pointer label flex justify-start">
+        <span class="label-text text-base ml-auto">رنگ پس زمینه هدر</span>
         <input v-model="block.data.backgroundColor" type="color" class="">
       </label>
     </div>

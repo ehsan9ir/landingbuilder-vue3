@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <div v-for="(block, index) in page" :key="block.uuid">
+    <main id="main">
+        <section v-for="(block, index) in page" :key="block.uuid">
             <BlockPreviewer :block="block" :first="index == 0"/>
-        </div>
-    </div>
+        </section>
+    </main>
 </template>
 
 <script>

@@ -9,12 +9,13 @@ const groups = ref([
             {
                 uuid: uuidv4(),
                 type: 'Header',
-                model: 'image-left',
+                model: 'Header',
                 componentName: 'Header',
                 optionsComponentName: 'HeaderOptions',
                 description: 'Header',
                 thumbUrl: '/images/thumbs/v1/header/header.jpg',
                 data: {
+                    mainBackgroundColor: '#F5F8FE',
                     backgroundColor: '#3F2A6F',
                     imageUrl: '/images/samples/v1/header/header.png',
                     hasHeaderBottom: true,
@@ -22,6 +23,58 @@ const groups = ref([
                     buttonBackgroundColor: '#FF5757',
                     buttonColor: '#FFFFFF',
                     buttonLink: '#register',
+                }
+            }
+        ]
+    },
+    {
+        uuid: uuidv4(),
+        title: 'Leaders',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'Leaders',
+                model: 'Leaders',
+                componentName: 'Leaders',
+                optionsComponentName: 'LeadersOptions',
+                description: 'Leaders',
+                thumbUrl: '/images/thumbs/v1/Leaders/Leaders.png',
+                data: {
+                    backgroundColor: '#F5F8FE',
+                    title: 'قهرمانان دکتر کرمانی',
+                    titleImage: '/images/samples/v1/leaders/titleImage.svg',
+                    list: [
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/leaders/hajilo.png',
+                            name: 'زهره حاجیلو',
+                            weightChange: 12,
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/leaders/hajizadeh.png',
+                            name: 'سمیرا حاجیزاده',
+                            weightChange: 21,
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/leaders/shayanfar.png',
+                            name: 'مریم شایان فر',
+                            weightChange: 38.5,
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/leaders/bahrami.png',
+                            name: 'سپیده بهرامی',
+                            weightChange: 30,
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/leaders/mahdavian.png',
+                            name: 'اکبر مهدویان',
+                            weightChange: 24,
+                        }
+                    ]
                 }
             }
         ]

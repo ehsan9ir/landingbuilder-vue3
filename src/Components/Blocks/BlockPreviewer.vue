@@ -25,9 +25,14 @@
 
     import Header from "./Header/Header.vue";
 
+    import Leaders from "./Leaders/Leaders.vue";
+
     export default {
         name: 'BlockPreviewer',
         components: {
+            Header,
+            Leaders,
+
             HeroImageLeft,
             HeroFormLeft,
             HeroVideoCenter,
@@ -41,7 +46,6 @@
             ChaptersCollapse,
             FAQCollapse,
             FAQList,
-            Header
         },
         props: {
             block: {
