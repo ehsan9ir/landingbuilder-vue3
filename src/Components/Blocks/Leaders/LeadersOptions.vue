@@ -1,5 +1,5 @@
 <template>
-  <div class="">
+  <div class="space-y-3">
     <div class="divider">اصلی</div>
     <div class="form-control">
       <label class="cursor-pointer label flex justify-start">
@@ -14,9 +14,7 @@
       <input v-model="block.data.title" type="text" class="input input-bordered input-sm">
     </div>
 
-    <div class="divider">قهرمان ها</div>
-
-    <div class="mt-8 font-bold uppercase text-sm text-gray-500">اضافه کردن قهرمان جدید</div>
+    <div class="divider pt-5">اضافه کردن قهرمان جدید</div>
 
     <div class="form-control">
       <label class="label mb-2">
@@ -43,16 +41,15 @@
       </label>
       <ImageUploadButton v-model="imageUrl" class="btn btn-sm btn-info btn-outline btn-block text-xs font-normal"/>
     </div>
-
     <div class="flex justify-end">
       <button @click="add()" class="btn btn-sm btn-outline btn-primary mt-2">تایید</button>
     </div>
 
-    <div class="mt-8 mb-2 font-bold uppercase text-sm text-gray-500">لیست قهرمانان</div>
+    <div class="divider pt-5">لیست قهرمانان</div>
 
     <div class="flex flex-col mb-8">
-      <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+      <div class="my-2 overflow-x-auto">
+        <div class="py-2 align-middle inline-block min-w-full">
           <div class="overflow-hidden rounded-xl">
             <table class="min-w-full divide-y divide-gray-200">
               <tbody class="bg-white divide-y divide-gray-200">
