@@ -81,6 +81,9 @@
     import Leaders from "./Leaders/Leaders.vue";
     import LeadersOptions from "./Leaders/LeadersOptions.vue";
 
+    import Video from "./Video/Video.vue";
+    import VideoOptions from "./Video/VideoOptions.vue";
+
     export default {
         name: 'BlockWrapper',
         emits: ['delete'],
@@ -89,6 +92,8 @@
             HeaderOptions,
             Leaders,
             LeadersOptions,
+            Video,
+            VideoOptions,
 
             Icon,
 
