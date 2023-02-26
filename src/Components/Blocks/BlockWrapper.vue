@@ -84,6 +84,9 @@
     import Video from "./Video/Video.vue";
     import VideoOptions from "./Video/VideoOptions.vue";
 
+    import DietProperty from "./Diet/DietProperty.vue";
+    import DietPropertyOptions from "./Diet/DietPropertyOptions.vue";
+
     export default {
         name: 'BlockWrapper',
         emits: ['delete'],
@@ -94,6 +97,8 @@
             LeadersOptions,
             Video,
             VideoOptions,
+            DietProperty,
+            DietPropertyOptions,
 
             Icon,
 

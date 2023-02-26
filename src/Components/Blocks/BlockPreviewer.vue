@@ -27,7 +27,7 @@
 
     import Leaders from "./Leaders/Leaders.vue";
     import Video from "./Video/Video.vue";
-    import VideoOptions from "./Video/VideoOptions.vue";
+    import DietProperty from "./Diet/DietProperty.vue";
 
     export default {
         name: 'BlockPreviewer',
@@ -35,7 +35,7 @@
             Header,
             Leaders,
             Video,
-            VideoOptions,
+            DietProperty,
 
             HeroImageLeft,
             HeroFormLeft,
