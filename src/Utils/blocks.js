@@ -1,6 +1,48 @@
 import { ref } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
 
+const faqs = [
+    {
+        uuid: uuidv4(),
+        question: 'چاق نیستم فقط شکم دارم؟',
+        answer: 'رژیمی وجود نداره که فقط یک بخش از بدن رو لاغر کنه اما در طول رژیم بیشترین حجم چربی از شکم و پهلو کم میشه.',
+    },
+    {
+        uuid: uuidv4(),
+        question: 'آیا رژیم باعث ریزش مو میشه؟',
+        answer: 'نگران نباش در طول رژیم هیچ ماده غذایی حذف نمیشه ولی در صورت ریزش مو می تونید از مولتی ویتامین مینرال استفاده کنید.',
+    },
+    {
+        uuid: uuidv4(),
+        question: 'چیکار کنم که بعد از رژیم پوستم خراب نشه؟',
+        answer: 'ورزش کردن و مصرف آب زیاد در طول رژیم از چروک پوست جلوگیری می کنه',
+    },
+    {
+        uuid: uuidv4(),
+        question: 'اگه در دوران رژیم باردار شدم چکار کنم؟',
+        answer: 'در صورت بارداری وضعیت رژیم شما به رژیم بارداری تغییر میکنه و در طول رژیم بارداری تمام مواد مورد نیاز مادر و جنین در نظر گرفته شده',
+    },
+    {
+        uuid: uuidv4(),
+        question: 'تو دوره‌ی رژیم چقدر لاغر می‌شیم؟',
+        answer: 'تو این دوره‌ی سه ماهه می‌تونی انتظار 12 کیلو کاهش وزن رو داشته باشی. دو هفته‌ی اول بیشترین مقدار کاهش وزن اتفاق می‌افته که دلیلش کاهش وزن آب بدنه که به مرور روندش کندتر می‌شه.',
+    },
+    {
+        uuid: uuidv4(),
+        question: 'چه کسانی می‌تونن رژیم بگیرن؟',
+        answer: 'تمام افراد بالای 12 سال و زیر 70 سال می‌تونن رژیم بگیرن.',
+    },
+    {
+        uuid: uuidv4(),
+        question: 'چه کسانی نمی‌تونن رژیم بگیرن؟',
+        answer: 'افراد زیر 12 سال، بالای 70 سال، افراد مبتلا به دیابت نوع 1، افرادی که کم خونی شدید دارن، زنانی که تو 6 ماه اول شیردهی هستن، افراد دیالیزی، کسانی که عارضه‌ی دفع پروتئین دارن و یا در حال گذروندن دوره‌ی شیمی درمانی هستن، نباید رژیم بگیرن.',
+    },
+    {
+        uuid: uuidv4(),
+        question: 'آیا محدودیت غذایی تو رژیم وجود داره؟',
+        answer: 'خیر. هیچ محدودیت غذایی تو رژیم دکتر کرمانی وجود نداره. از دیزی تا سوشی هر غذایی دلت خواست تو رژیمت هست.',
+    }
+]
 const groups = ref([
     {
         uuid: uuidv4(),
@@ -109,6 +151,43 @@ const groups = ref([
             }
         ]
     },
+
+    {
+        uuid: uuidv4(),
+        title: 'FAQ',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'faq',
+                model: 'list',
+                componentName: 'FAQList',
+                optionsComponentName: 'FAQListOptions',
+                description: 'List',
+                thumbUrl: '/images/thumbs/v1/faq/list.png',
+                data: {
+                    title: 'سوالات متداول',
+                    blockBackgroundColor: '#F5F8FE',
+                    list: faqs
+                }
+            },
+            {
+                uuid: uuidv4(),
+                type: 'faq',
+                model: 'collapse',
+                componentName: 'FAQCollapse',
+                optionsComponentName: 'FAQCollapseOptions',
+                description: 'Collapse',
+                thumbUrl: '/images/thumbs/v1/faq/collapse.png',
+                data: {
+                    blockBackgroundColor: '#F5F8FE',
+                    title: 'سوالات متداول',
+                    list: faqs
+                }
+            },
+        ]
+    },
+
+
 
     {
         uuid: uuidv4(),
@@ -275,82 +354,6 @@ const groups = ref([
                     subtitle: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, ex.',
                     buttonLink: 'https://google.com',
                     buttonText: 'Buy NOW',
-                }
-            },
-        ]
-    },
-    {
-        uuid: uuidv4(),
-        title: 'FAQ',
-        blocks: [
-            {
-                uuid: uuidv4(),
-                type: 'faq',
-                model: 'list',
-                componentName: 'FAQList',
-                optionsComponentName: 'FAQListOptions',
-                description: 'List',
-                thumbUrl: '/images/thumbs/v1/faq/list.png',
-                data: {
-                    darkMode: false,
-                    title: 'Frequently Asked Questions',
-                    list: [
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 1',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum!',
-                        },
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 2',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum!',
-                        },
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 3',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum!',
-                        },
-                    ]
-                }
-            },
-            {
-                uuid: uuidv4(),
-                type: 'faq',
-                model: 'collapse',
-                componentName: 'FAQCollapse',
-                optionsComponentName: 'FAQCollapseOptions',
-                description: 'Collapse',
-                thumbUrl: '/images/thumbs/v1/faq/collapse.png',
-                data: {
-                    darkMode: false,
-                    title: 'Dúvidas mais Frequentes',
-                    list: [
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 1 goes here',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum sit ex quidem neque atque iusto, impedit error? Cumque, obcaecati! Ratione, magni corporis!',
-                        },
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 2 goes here',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum sit ex quidem neque atque iusto, impedit error? Cumque, obcaecati! Ratione, magni corporis!',
-                        },
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 3 goes here',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum sit ex quidem neque atque iusto, impedit error? Cumque, obcaecati! Ratione, magni corporis!',
-                        },
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 4 goes here',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum sit ex quidem neque atque iusto, impedit error? Cumque, obcaecati! Ratione, magni corporis!',
-                        },
-                        {
-                            uuid: uuidv4(),
-                            question: 'Question 5 goes here',
-                            answer: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit perspiciatis sint enim autem quia minima saepe voluptatum sit ex quidem neque atque iusto, impedit error? Cumque, obcaecati! Ratione, magni corporis!',
-                        },
-                    ]
                 }
             },
         ]

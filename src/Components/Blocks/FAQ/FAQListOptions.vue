@@ -1,38 +1,39 @@
 <template>
     <div class="">
         <div class="form-control">
-            <label class="cursor-pointer label flex justify-start">
-                <input v-model="block.data.darkMode" type="checkbox" checked="checked" class="toggle toggle-primary">
-                <span class="label-text text-base ml-2">Dark mode</span> 
-            </label>
+          <label class="cursor-pointer label flex justify-start">
+            <span class="label-text text-base ml-auto">رنگ پس زمینه بلاک</span>
+            <input v-model="block.data.blockBackgroundColor" type="color">
+          </label>
         </div>
+      
         <div class="form-control mb-8">
             <label class="label -mb-2">
-                <span class="label-text">Section title</span>
+                <span class="label-text">عنوان</span>
             </label>
             <input v-model="block.data.title" type="text" class="input input-bordered input-sm">
         </div>
 
-        <div class="mt-8 font-bold uppercase text-sm text-gray-500">Add new FAQ</div>
+        <div class="mt-8 font-bold uppercase text-sm text-gray-500">اضافه کردن به لیست</div>
 
         <div class="form-control">
             <label class="label -mb-2">
-                <span class="label-text">Question</span>
+                <span class="label-text">سوال</span>
             </label>
             <input v-model="question" type="text" class="input input-bordered input-sm">
         </div>
         <div class="form-control">
             <label class="label -mb-2">
-                <span class="label-text">Answer</span>
+                <span class="label-text">پاسخ</span>
             </label>
             <textarea v-model="answer" class="textarea h-24 textarea-bordered"></textarea>
         </div>
 
         <div class="flex justify-end">
-            <button @click="add()" class="btn btn-sm btn-outline btn-primary mt-2">Add</button>
+            <button @click="add()" class="btn btn-sm btn-outline btn-primary mt-2">اضافه</button>
         </div>
 
-        <div class="mt-8 mb-2 font-bold uppercase text-sm text-gray-500">Current FAQs</div>
+        <div class="mt-8 mb-2 font-bold uppercase text-sm text-gray-500">FAQs</div>
 
         <div class="flex flex-col mb-8">
             <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
