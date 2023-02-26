@@ -26,12 +26,16 @@
     import Header from "./Header/Header.vue";
 
     import Leaders from "./Leaders/Leaders.vue";
+    import Video from "./Video/Video.vue";
+    import VideoOptions from "./Video/VideoOptions.vue";
 
     export default {
         name: 'BlockPreviewer',
         components: {
             Header,
             Leaders,
+            Video,
+            VideoOptions,
 
             HeroImageLeft,
             HeroFormLeft,

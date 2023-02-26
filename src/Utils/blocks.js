@@ -81,6 +81,37 @@ const groups = ref([
     },
     {
         uuid: uuidv4(),
+        title: 'Video',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'Video',
+                model: 'Video',
+                componentName: 'Video',
+                optionsComponentName: 'VideoOptions',
+                description: 'Video',
+                thumbUrl: '/images/thumbs/v1/video/video.png',
+                data: {
+                    title: '',
+                    blockBackgroundColor: '#F5F8FE',
+                    videoTitle: 'داستان کسانی که\nبه بهشت رسیدند',
+                    posterUrl: '/images/samples/v1/video/poster.jpg',
+                    videoUrl: 'https://behandam.kermany.com/medyar-service/public/storage/1596/545a76aeeb6a5899219cc2e4dd3cb859ecf0eaa5.mp4',
+                    buttonText: 'منم میخوام خوش اندام بشم',
+                    buttonBackgroundColor: '#1ABC9C',
+                    buttonColor: '#FFFFFF',
+                    buttonLink: '#register',
+                    videoBackgroundColor: '#E5EBF8',
+                    titleColor: '#212121',
+                    playIconBackgroundColor: '#FF5757',
+                    playIconColor: '#FFFFFF',
+                }
+            }
+        ]
+    },
+
+    {
+        uuid: uuidv4(),
         title: 'Heroes',
         blocks: [
             {

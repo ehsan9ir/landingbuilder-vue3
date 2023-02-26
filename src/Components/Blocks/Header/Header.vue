@@ -4,7 +4,7 @@
         <img :src="block.data.imageUrl" class="w-80 block mx-auto mb-3" alt="header">
         <div class="text-center">
           <a class="btn"
-             :href="buttonLink"
+             :href="block.data.buttonLink"
              :style="{
                       backgroundColor: block.data.buttonBackgroundColor,
                       color: block.data.buttonColor
