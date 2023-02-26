@@ -151,7 +151,6 @@ const groups = ref([
             }
         ]
     },
-
     {
         uuid: uuidv4(),
         title: 'FAQ',
@@ -184,6 +183,53 @@ const groups = ref([
                     list: faqs
                 }
             },
+        ]
+    },
+    {
+        uuid: uuidv4(),
+        title: 'DietProperty',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'DietProperty',
+                model: 'DietProperty',
+                componentName: 'DietProperty',
+                optionsComponentName: 'DietPropertyOptions',
+                description: 'DietProperty',
+                thumbUrl: '/images/thumbs/v1/diet-property/diet-property.png',
+                data: {
+                    title: 'ویژگی‌های\n برنامه غذایی',
+                    blockBackgroundColor: '#3F2A6F',
+                    titleColor: '#FFFFFF',
+                    list: [
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/diet-property/support.svg',
+                            title: 'پشتیبانی\nکارشناس تغذیه'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/diet-property/size.svg',
+                            title: '10 تا 12 سانت\nکاهش سایز'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/diet-property/weight.svg',
+                            title: '10 تا 12 کیلو\nکاهش وزن'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/diet-property/personality.svg',
+                            title: 'رژیم 3 ماهه\nمتناسب با'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/diet-property/food.svg',
+                            title: 'بدون\nمحدودیت غذایی'
+                        },
+                    ]
+                }
+            }
         ]
     },
 
