@@ -232,7 +232,91 @@ const groups = ref([
             }
         ]
     },
-
+    {
+        uuid: uuidv4(),
+        title: 'OurTeam',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'OurTeam',
+                model: 'OurTeam',
+                componentName: 'OurTeam',
+                optionsComponentName: 'OurTeamOptions',
+                description: 'OurTeam',
+                thumbUrl: '/images/thumbs/v1/our-team/our-team.png',
+                data: {
+                    title: 'کارشناسان دکتر کرمانی\nکنارت هستن',
+                    blockBackgroundColor: '#F5F8FE',
+                    titleColor: '#212121',
+                    list: [
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/gandomkar.png',
+                            title: 'فاطمه گندمکار',
+                            description: 'مصمم و خندونه،\nراهتو روشن می‌کنه',
+                            color: 'blue'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/seifi.png',
+                            title: 'فاطمه سیفی',
+                            description: 'حامی و شنونده‌س،\nهواتو داره',
+                            color: 'orange'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/karimi.png',
+                            title: 'سمانه کریمی',
+                            description: 'پیگیره و دقیق؛ باهاش\nنگران شکستن رژیمت نباش',
+                            color: 'yellow'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/dehdashtpor.png',
+                            title: 'زینب دهدشت پور',
+                            description: 'قوی و با اراده‌س،\nدستتو می‌گیره',
+                            color: 'blue'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/khoshnejad.png',
+                            title: 'فاطمه خوش نژاد',
+                            description: 'یه حرفه‌ایِ آرومه،\nباهاش نتیجه میگیری',
+                            color: 'orange'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/solatpor.png',
+                            title: 'زهرا صولت پور',
+                            description: 'خوش‌بین و گرمه،\nحمایتت میکنه',
+                            color: 'yellow'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/mozafari.png',
+                            title: 'ریحانه مظفری',
+                            description: 'مهربونه؛\nتا انتهای مسیر همراهته',
+                            color: 'blue'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/dalir.png',
+                            title: 'سیما دلیر',
+                            description: 'صبور و خوش‌صحبته،\nسر ذوقت میاره',
+                            color: 'orange'
+                        },
+                        {
+                            uuid: uuidv4(),
+                            image: '/images/samples/v1/our-team/norozi.png',
+                            title: 'مهسا نوروزی',
+                            description: 'مشتاق و با حوصله‌س،\nلاغری باهاش تضمینیه',
+                            color: 'yellow'
+                        },
+                    ]
+                }
+            }
+        ]
+    },
 
 
     {

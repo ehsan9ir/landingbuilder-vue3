@@ -87,6 +87,9 @@
     import DietProperty from "./Diet/DietProperty.vue";
     import DietPropertyOptions from "./Diet/DietPropertyOptions.vue";
 
+    import OurTeam from "./OurTeam/OurTeam.vue"
+    import OurTeamOptions from "./OurTeam/OurTeamOptions.vue"
+
     export default {
         name: 'BlockWrapper',
         emits: ['delete'],
@@ -99,7 +102,8 @@
             VideoOptions,
             DietProperty,
             DietPropertyOptions,
-
+            OurTeam,
+            OurTeamOptions,
             Icon,
 
             HeroImageLeft,

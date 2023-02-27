@@ -28,6 +28,7 @@
     import Leaders from "./Leaders/Leaders.vue";
     import Video from "./Video/Video.vue";
     import DietProperty from "./Diet/DietProperty.vue";
+    import OurTeam from "./OurTeam/OurTeam.vue"
 
     export default {
         name: 'BlockPreviewer',
@@ -36,6 +37,7 @@
             Leaders,
             Video,
             DietProperty,
+            OurTeam,
 
             HeroImageLeft,
             HeroFormLeft,
