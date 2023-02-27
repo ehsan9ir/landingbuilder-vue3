@@ -64,7 +64,7 @@ const groups = ref([
                     buttonText: 'ثبت نام و دریافت برنامه غذایی',
                     buttonBackgroundColor: '#FF5757',
                     buttonColor: '#FFFFFF',
-                    buttonLink: '#register',
+                    buttonLink: '#cta',
                 }
             }
         ]
@@ -142,7 +142,7 @@ const groups = ref([
                     buttonText: 'منم میخوام خوش اندام بشم',
                     buttonBackgroundColor: '#1ABC9C',
                     buttonColor: '#FFFFFF',
-                    buttonLink: '#register',
+                    buttonLink: '#cta',
                     videoBackgroundColor: '#E5EBF8',
                     titleColor: '#212121',
                     playIconBackgroundColor: '#FF5757',
@@ -333,6 +333,30 @@ const groups = ref([
                     mainBackgroundColor: '#F5F8FE',
                     backgroundColor: '#3F2A6F',
                     hasFooterTop: true
+                }
+            }
+        ]
+    },
+    {
+        uuid: uuidv4(),
+        title: 'CTA',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'CTA',
+                model: 'CTA',
+                componentName: 'CTA',
+                optionsComponentName: 'CTAOptions',
+                description: 'CTA',
+                thumbUrl: '/images/thumbs/v1/cta/cta.png',
+                data: {
+                    mainBackgroundColor: '#F5F8FE',
+                    imageUrl: '/images/samples/v1/cta/150x150.png',
+                    backgroundColor: '#3F2A6F',
+                    buttonText: 'ثبت نام و دریافت برنامه غذایی',
+                    buttonBackgroundColor: '#FF5757',
+                    buttonColor: '#FFFFFF',
+                    buttonLink: 'https://behandam.kermany.com/',
                 }
             }
         ]

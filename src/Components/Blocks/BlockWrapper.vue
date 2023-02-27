@@ -93,6 +93,9 @@
     import Footer from "./Footer/Footer.vue";
     import FooterOptions from "./Footer/FooterOptions.vue";
 
+    import CTA from "./CTA/CTA.vue";
+    import CTAOptions from "./CTA/CTAOptions.vue";
+
     export default {
         name: 'BlockWrapper',
         emits: ['delete'],
@@ -109,6 +112,8 @@
             OurTeamOptions,
             Footer,
             FooterOptions,
+            CTA,
+            CTAOptions,
             Icon,
 
             HeroImageLeft,

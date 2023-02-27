@@ -30,6 +30,7 @@
     import DietProperty from "./Diet/DietProperty.vue";
     import OurTeam from "./OurTeam/OurTeam.vue"
     import Footer from "./Footer/Footer.vue";
+    import CTA from "./CTA/CTA.vue";
 
     export default {
         name: 'BlockPreviewer',
@@ -40,7 +41,7 @@
             DietProperty,
             OurTeam,
             Footer,
-
+            CTA,
             HeroImageLeft,
             HeroFormLeft,
             HeroVideoCenter,
