@@ -317,7 +317,26 @@ const groups = ref([
             }
         ]
     },
-
+    {
+        uuid: uuidv4(),
+        title: 'Footer',
+        blocks: [
+            {
+                uuid: uuidv4(),
+                type: 'Footer',
+                model: 'Footer',
+                componentName: 'Footer',
+                optionsComponentName: 'FooterOptions',
+                description: 'Footer',
+                thumbUrl: '/images/thumbs/v1/footer/footer.png',
+                data: {
+                    mainBackgroundColor: '#F5F8FE',
+                    backgroundColor: '#3F2A6F',
+                    hasFooterTop: true
+                }
+            }
+        ]
+    },
 
     {
         uuid: uuidv4(),

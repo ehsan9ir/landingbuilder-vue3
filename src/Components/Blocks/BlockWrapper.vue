@@ -90,6 +90,9 @@
     import OurTeam from "./OurTeam/OurTeam.vue"
     import OurTeamOptions from "./OurTeam/OurTeamOptions.vue"
 
+    import Footer from "./Footer/Footer.vue";
+    import FooterOptions from "./Footer/FooterOptions.vue";
+
     export default {
         name: 'BlockWrapper',
         emits: ['delete'],
@@ -104,6 +107,8 @@
             DietPropertyOptions,
             OurTeam,
             OurTeamOptions,
+            Footer,
+            FooterOptions,
             Icon,
 
             HeroImageLeft,
