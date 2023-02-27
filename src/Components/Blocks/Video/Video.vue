@@ -1,6 +1,6 @@
 <template>
   <section :style="{ backgroundColor: block.data.blockBackgroundColor }" class="py-5">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
       <div class="mx-auto mb-5 p-4 video-container" :style="{ backgroundColor: block.data.videoBackgroundColor }" >
         <div class="video_holder">
           <img src="/images/samples/v1/video/video.svg" alt="video" class="ic-video">
@@ -26,6 +26,7 @@
            :href="block.data.buttonLink"
            :style="{
                       backgroundColor: block.data.buttonBackgroundColor,
+                      borderColor: block.data.buttonBackgroundColor,
                       color: block.data.buttonColor
                     }">
           {{ block.data.buttonText }}
