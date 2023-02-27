@@ -1,6 +1,6 @@
 <template>
   <section :style="{ backgroundColor: block.data.blockBackgroundColor }" class="py-5">
-    <div class="pb-5">
+    <div class="py-5">
       <div class="text-2xl font-bold text-center whitespace-pre-line mb-5" :style="{color: block.data.titleColor}">
         {{ block.data.title }}
       </div>

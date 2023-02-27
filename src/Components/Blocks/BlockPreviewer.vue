@@ -29,6 +29,7 @@
     import Video from "./Video/Video.vue";
     import DietProperty from "./Diet/DietProperty.vue";
     import OurTeam from "./OurTeam/OurTeam.vue"
+    import Footer from "./Footer/Footer.vue";
 
     export default {
         name: 'BlockPreviewer',
@@ -38,6 +39,7 @@
             Video,
             DietProperty,
             OurTeam,
+            Footer,
 
             HeroImageLeft,
             HeroFormLeft,
