@@ -12,8 +12,8 @@
                 <input v-model="form.password" class="pl-2 outline-none border-none" type="password" placeholder="Password"/>
               </div>
             </div>
-            <div v-if="error" class="text-red-500 text-sm text-center w-full p-4 bg-red-100 rounded-md mt-4">
-              {{ error }}
+            <div v-if="errorMessage" class="text-red-500 text-sm text-center w-full p-4 bg-red-100 rounded-md mt-4">
+              {{ errorMessage }}
             </div>
             <button v-if="processing" disabled class="btn btn-primary btn-block loading disabled mt-4 mb-2">
                 ورود
@@ -42,30 +42,32 @@
         setup() {
             const router = useRouter()
 
-            const error = ref(false)
+            const errorMessage = ref('')
             const processing = ref(false)
 
             const form = ref({
-                email: 'admin@admin.com',
-                password: '654321',
+                email: '',
+                password: '',
             })
 
             const submit = async () => {
                 processing.value = true
-                error.value = false
+                errorMessage.value = ''
 
                 Api.login(form.value)
                     .then(() => {
                         router.push({name: 'Dashboard'})
                         processing.value = false
                     })
-                    .catch(() => {
-                        error.value = true
+                    .catch((error) => {
+                        if (error.response) {
+                          errorMessage.value = error.response.data.message
+                        }
                         processing.value = false
                     })
             }
 
-            return { form, submit, error, processing }
+            return { form, submit, errorMessage, processing }
         },
     })
 </script>
