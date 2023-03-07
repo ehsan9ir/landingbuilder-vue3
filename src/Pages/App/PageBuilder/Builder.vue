@@ -15,10 +15,10 @@
                 <div class="bg-slate-800 overflow-y-auto h-screen w-5/6">
                     <div class="p-0">
                         <div class="px-4 pt-4 gap-x-2 flex justify-end">
-                            <a :href="'/app/preview/' + route.params.uuid + '/main'" target="_blank" class="btn btn-sm btn-success">
+                            <router-link :to="'/app/preview/' + route.params.uuid + '/main'" target="_blank" class="btn btn-sm btn-success">
                                 <span class="ml-1 font-normal text-xs">پیش نمایش</span>
                                 <Icon styles="w-4 h-4" name="external-link"/>
-                            </a>
+                            </router-link>
 
                             <button @click="save()" class="btn btn-sm btn-info" :disabled="saving">
                                 <span class="ml-1 font-normal text-xs">ذخیره</span>

@@ -1,5 +1,6 @@
 import { ref } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
+const baseUrl = import.meta.env.BASE_URL
 
 const faqs = [
     {
@@ -55,11 +56,11 @@ const groups = ref([
                 componentName: 'Header',
                 optionsComponentName: 'HeaderOptions',
                 description: 'Header',
-                thumbUrl: '/images/thumbs/v1/header/header.jpg',
+                thumbUrl: baseUrl + 'images/thumbs/v1/header/header.jpg',
                 data: {
                     mainBackgroundColor: '#F5F8FE',
                     backgroundColor: '#3F2A6F',
-                    imageUrl: '/images/samples/v1/header/header.png',
+                    imageUrl: baseUrl + 'images/samples/v1/header/header.png',
                     hasHeaderBottom: true,
                     buttonText: 'ثبت نام و دریافت برنامه غذایی',
                     buttonBackgroundColor: '#FF5757',
@@ -80,39 +81,39 @@ const groups = ref([
                 componentName: 'Leaders',
                 optionsComponentName: 'LeadersOptions',
                 description: 'Leaders',
-                thumbUrl: '/images/thumbs/v1/Leaders/Leaders.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/Leaders/Leaders.png',
                 data: {
                     backgroundColor: '#F5F8FE',
                     title: 'قهرمانان دکتر کرمانی',
-                    titleImage: '/images/samples/v1/leaders/titleImage.svg',
+                    titleImage: baseUrl + 'images/samples/v1/leaders/titleImage.svg',
                     list: [
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/leaders/hajilo.png',
+                            image: baseUrl + 'images/samples/v1/leaders/hajilo.png',
                             name: 'زهره حاجیلو',
                             weightChange: 12,
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/leaders/hajizadeh.png',
+                            image: baseUrl + 'images/samples/v1/leaders/hajizadeh.png',
                             name: 'سمیرا حاجیزاده',
                             weightChange: 21,
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/leaders/shayanfar.png',
+                            image: baseUrl + 'images/samples/v1/leaders/shayanfar.png',
                             name: 'مریم شایان فر',
                             weightChange: 38.5,
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/leaders/bahrami.png',
+                            image: baseUrl + 'images/samples/v1/leaders/bahrami.png',
                             name: 'سپیده بهرامی',
                             weightChange: 30,
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/leaders/mahdavian.png',
+                            image: baseUrl + 'images/samples/v1/leaders/mahdavian.png',
                             name: 'اکبر مهدویان',
                             weightChange: 24,
                         }
@@ -132,12 +133,12 @@ const groups = ref([
                 componentName: 'Video',
                 optionsComponentName: 'VideoOptions',
                 description: 'Video',
-                thumbUrl: '/images/thumbs/v1/video/video.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/video/video.png',
                 data: {
                     title: '',
                     blockBackgroundColor: '#F5F8FE',
                     videoTitle: 'داستان کسانی که\nبه بهشت رسیدند',
-                    posterUrl: '/images/samples/v1/video/poster.jpg',
+                    posterUrl: baseUrl + 'images/samples/v1/video/poster.jpg',
                     videoUrl: 'https://behandam.kermany.com/medyar-service/public/storage/1596/545a76aeeb6a5899219cc2e4dd3cb859ecf0eaa5.mp4',
                     buttonText: 'منم میخوام خوش اندام بشم',
                     buttonBackgroundColor: '#1ABC9C',
@@ -162,7 +163,7 @@ const groups = ref([
                 componentName: 'FAQList',
                 optionsComponentName: 'FAQListOptions',
                 description: 'List',
-                thumbUrl: '/images/thumbs/v1/faq/list.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/faq/list.png',
                 data: {
                     title: 'سوالات متداول',
                     blockBackgroundColor: '#F5F8FE',
@@ -176,7 +177,7 @@ const groups = ref([
                 componentName: 'FAQCollapse',
                 optionsComponentName: 'FAQCollapseOptions',
                 description: 'Collapse',
-                thumbUrl: '/images/thumbs/v1/faq/collapse.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/faq/collapse.png',
                 data: {
                     blockBackgroundColor: '#F5F8FE',
                     title: 'سوالات متداول',
@@ -196,7 +197,7 @@ const groups = ref([
                 componentName: 'DietProperty',
                 optionsComponentName: 'DietPropertyOptions',
                 description: 'DietProperty',
-                thumbUrl: '/images/thumbs/v1/diet-property/diet-property.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/diet-property/diet-property.png',
                 data: {
                     title: 'ویژگی‌های\n برنامه غذایی',
                     blockBackgroundColor: '#3F2A6F',
@@ -204,27 +205,27 @@ const groups = ref([
                     list: [
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/diet-property/support.svg',
+                            image: baseUrl + 'images/samples/v1/diet-property/support.svg',
                             title: 'پشتیبانی\nکارشناس تغذیه'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/diet-property/size.svg',
+                            image: baseUrl + 'images/samples/v1/diet-property/size.svg',
                             title: '10 تا 12 سانت\nکاهش سایز'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/diet-property/weight.svg',
+                            image: baseUrl + 'images/samples/v1/diet-property/weight.svg',
                             title: '10 تا 12 کیلو\nکاهش وزن'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/diet-property/personality.svg',
+                            image: baseUrl + 'images/samples/v1/diet-property/personality.svg',
                             title: 'رژیم 3 ماهه\nمتناسب با'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/diet-property/food.svg',
+                            image: baseUrl + 'images/samples/v1/diet-property/food.svg',
                             title: 'بدون\nمحدودیت غذایی'
                         },
                     ]
@@ -243,7 +244,7 @@ const groups = ref([
                 componentName: 'OurTeam',
                 optionsComponentName: 'OurTeamOptions',
                 description: 'OurTeam',
-                thumbUrl: '/images/thumbs/v1/our-team/our-team.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/our-team/our-team.png',
                 data: {
                     title: 'کارشناسان دکتر کرمانی\nکنارت هستن',
                     blockBackgroundColor: '#F5F8FE',
@@ -251,63 +252,63 @@ const groups = ref([
                     list: [
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/gandomkar.png',
+                            image: baseUrl + 'images/samples/v1/our-team/gandomkar.png',
                             title: 'فاطمه گندمکار',
                             description: 'مصمم و خندونه،\nراهتو روشن می‌کنه',
                             color: 'blue'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/seifi.png',
+                            image: baseUrl + 'images/samples/v1/our-team/seifi.png',
                             title: 'فاطمه سیفی',
                             description: 'حامی و شنونده‌س،\nهواتو داره',
                             color: 'orange'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/karimi.png',
+                            image: baseUrl + 'images/samples/v1/our-team/karimi.png',
                             title: 'سمانه کریمی',
                             description: 'پیگیره و دقیق؛ باهاش\nنگران شکستن رژیمت نباش',
                             color: 'yellow'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/dehdashtpor.png',
+                            image: baseUrl + 'images/samples/v1/our-team/dehdashtpor.png',
                             title: 'زینب دهدشت پور',
                             description: 'قوی و با اراده‌س،\nدستتو می‌گیره',
                             color: 'blue'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/khoshnejad.png',
+                            image: baseUrl + 'images/samples/v1/our-team/khoshnejad.png',
                             title: 'فاطمه خوش نژاد',
                             description: 'یه حرفه‌ایِ آرومه،\nباهاش نتیجه میگیری',
                             color: 'orange'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/solatpor.png',
+                            image: baseUrl + 'images/samples/v1/our-team/solatpor.png',
                             title: 'زهرا صولت پور',
                             description: 'خوش‌بین و گرمه،\nحمایتت میکنه',
                             color: 'yellow'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/mozafari.png',
+                            image: baseUrl + 'images/samples/v1/our-team/mozafari.png',
                             title: 'ریحانه مظفری',
                             description: 'مهربونه؛\nتا انتهای مسیر همراهته',
                             color: 'blue'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/dalir.png',
+                            image: baseUrl + 'images/samples/v1/our-team/dalir.png',
                             title: 'سیما دلیر',
                             description: 'صبور و خوش‌صحبته،\nسر ذوقت میاره',
                             color: 'orange'
                         },
                         {
                             uuid: uuidv4(),
-                            image: '/images/samples/v1/our-team/norozi.png',
+                            image: baseUrl + 'images/samples/v1/our-team/norozi.png',
                             title: 'مهسا نوروزی',
                             description: 'مشتاق و با حوصله‌س،\nلاغری باهاش تضمینیه',
                             color: 'yellow'
@@ -328,7 +329,7 @@ const groups = ref([
                 componentName: 'Footer',
                 optionsComponentName: 'FooterOptions',
                 description: 'Footer',
-                thumbUrl: '/images/thumbs/v1/footer/footer.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/footer/footer.png',
                 data: {
                     mainBackgroundColor: '#F5F8FE',
                     backgroundColor: '#3F2A6F',
@@ -348,10 +349,10 @@ const groups = ref([
                 componentName: 'CTA',
                 optionsComponentName: 'CTAOptions',
                 description: 'CTA',
-                thumbUrl: '/images/thumbs/v1/cta/cta.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/cta/cta.png',
                 data: {
                     mainBackgroundColor: '#F5F8FE',
-                    imageUrl: '/images/samples/v1/cta/150x150.png',
+                    imageUrl: baseUrl + 'images/samples/v1/cta/150x150.png',
                     backgroundColor: '#3F2A6F',
                     buttonText: 'ثبت نام و دریافت برنامه غذایی',
                     buttonBackgroundColor: '#FF5757',
@@ -373,12 +374,12 @@ const groups = ref([
                 componentName: 'HeroImageLeft',
                 optionsComponentName: 'HeroImageLeftOptions',
                 description: 'Image left',
-                thumbUrl: '/images/thumbs/v1/heroes/image-right.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/heroes/image-right.png',
                 data: {
                     darkMode: false,
                     title: 'Compeling title about your product!!!',
                     subtitle: 'Describe the main benefit you product delivers to your customers.',
-                    imageUrl: '/images/samples/v1/heros/cover.png',
+                    imageUrl: baseUrl + 'images/samples/v1/heros/cover.png',
                     buttonText: 'Buy NOW!!!',
                     buttonLink: 'https://google.com',
                 }
@@ -390,7 +391,7 @@ const groups = ref([
                 componentName: 'HeroFormLeft',
                 optionsComponentName: 'HeroFormLeftOptions',
                 description: 'Form left',
-                thumbUrl: '/images/thumbs/v1/heroes/form-right.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/heroes/form-right.png',
                 data: {
                     darkMode: false,
                     title: 'Compeling title about your product!!!',
@@ -405,7 +406,7 @@ const groups = ref([
                 componentName: 'HeroVideoCenter',
                 optionsComponentName: 'HeroVideoCenterOptions',
                 description: 'Video center',
-                thumbUrl: '/images/thumbs/v1/heroes/video-center.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/heroes/video-center.png',
                 data: {
                     darkMode: false,
                     title: 'Compeling title about your product!!!',
@@ -426,7 +427,7 @@ const groups = ref([
                 componentName: 'FeaturesGrid3',
                 optionsComponentName: 'FeaturesGrid3Options',
                 description: 'Grid 3x1',
-                thumbUrl: '/images/thumbs/v1/features/grid-3.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/features/grid-3.png',
                 data: {
                     darkMode: false,
                     title: 'Main benefits',
@@ -466,7 +467,7 @@ const groups = ref([
                 componentName: 'FeaturesGrid3Model2',
                 optionsComponentName: 'FeaturesGrid3Model2Options',
                 description: 'Grid 3x1 Model2',
-                thumbUrl: '/images/thumbs/v1/features/grid-3.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/features/grid-3.png',
                 data: {
                     darkMode: true,
                     title: 'رژیم برتر',
@@ -499,12 +500,12 @@ const groups = ref([
                 componentName: 'AuthorImageLeft',
                 optionsComponentName: 'AuthorImageLeftOptions',
                 description: 'Image Left',
-                thumbUrl: '/images/thumbs/v1/authors/image-left.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/authors/image-left.png',
                 data: {
                     darkMode: false,
                     title: 'About the author',
                     description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis provident, itaque doloribus earum nostrum iste nesciunt excepturi neque eius, numquam alias eos, delectus quo illum eaque consequuntur consectetur! Sequi soluta porro, magni possimus a tempore quas rem commodi aut pariatur quaerat natus sunt, nihil voluptate maxime beatae atque assumenda similique!',
-                    imageUrl: '/images/samples/v1/authors/sample.jpg'
+                    imageUrl: baseUrl + 'images/samples/v1/authors/sample.jpg'
                 }
             },
         ]
@@ -520,7 +521,7 @@ const groups = ref([
                 componentName: 'BuySimple',
                 optionsComponentName: 'BuySimpleOptions',
                 description: 'Simple',
-                thumbUrl: '/images/thumbs/v1/buy/simple.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/buy/simple.png',
                 data: {
                     darkMode: true,
                     title: 'Secure you copy right NOW!',
@@ -542,11 +543,11 @@ const groups = ref([
                 componentName: 'ChaptersCollapse',
                 optionsComponentName: 'ChaptersCollapseOptions',
                 description: 'Collapse',
-                thumbUrl: '/images/thumbs/v1/chapters/collapse.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/chapters/collapse.png',
                 data: {
                     darkMode: false,
                     title: 'The Chapters',
-                    imageUrl: '/images/samples/v1/chapters/ebook-cover.png',
+                    imageUrl: baseUrl + 'images/samples/v1/chapters/ebook-cover.png',
                     list: [
                         {
                             uuid: uuidv4(),
@@ -589,12 +590,12 @@ const groups = ref([
                 componentName: 'Guarantee7Days',
                 optionsComponentName: 'Guarantee7DaysOptions',
                 description: '7 Days',
-                thumbUrl: '/images/thumbs/v1/guarantee/7-days.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/guarantee/7-days.png',
                 data: {
                     darkMode: false,
                     title: 'Garantia Incondicional de 7 Dias',
                     description: 'Esse ebook é tudo que você precisa para começar a vender online e construir uma renda passiva mensal que trabalha 24h por dia, 7 dias por semana automaticamente enquanto vocẽ dorme.',
-                    imageUrl: '/images/samples/v1/guarantee/7-days.png',
+                    imageUrl: baseUrl + 'images/samples/v1/guarantee/7-days.png',
                 }
             },
             {
@@ -604,12 +605,12 @@ const groups = ref([
                 componentName: 'Guarantee10Days',
                 optionsComponentName: 'Guarantee10DaysOptions',
                 description: '10 Days',
-                thumbUrl: '/images/thumbs/v1/guarantee/10-days.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/guarantee/10-days.png',
                 data: {
                     darkMode: false,
                     title: 'Garantia Incondicional de 10 Dias',
                     description: 'Esse ebook é tudo que você precisa para começar a vender online e construir uma renda passiva mensal que trabalha 24h por dia, 10 dias por semana automaticamente enquanto vocẽ dorme.',
-                    imageUrl: '/images/samples/v1/guarantee/10-days.png',
+                    imageUrl: baseUrl + 'images/samples/v1/guarantee/10-days.png',
                 }
             },
             {
@@ -619,12 +620,12 @@ const groups = ref([
                 componentName: 'Guarantee15Days',
                 optionsComponentName: 'Guarantee15DaysOptions',
                 description: '15 Days',
-                thumbUrl: '/images/thumbs/v1/guarantee/15-days.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/guarantee/15-days.png',
                 data: {
                     darkMode: false,
                     title: 'Garantia Incondicional de 15 Dias',
                     description: 'Esse ebook é tudo que você precisa para começar a vender online e construir uma renda passiva mensal que trabalha 24h por dia, 15 dias por semana automaticamente enquanto vocẽ dorme.',
-                    imageUrl: '/images/samples/v1/guarantee/15-days.png',
+                    imageUrl: baseUrl + 'images/samples/v1/guarantee/15-days.png',
                 }
             },
             {
@@ -634,12 +635,12 @@ const groups = ref([
                 componentName: 'Guarantee30Days',
                 optionsComponentName: 'Guarantee30DaysOptions',
                 description: '30 Days',
-                thumbUrl: '/images/thumbs/v1/guarantee/30-days.png',
+                thumbUrl: baseUrl + 'images/thumbs/v1/guarantee/30-days.png',
                 data: {
                     darkMode: false,
                     title: 'Garantia Incondicional de 30 Dias',
                     description: 'Esse ebook é tudo que você precisa para começar a vender online e construir uma renda passiva mensal que trabalha 24h por dia, 30 dias por semana automaticamente enquanto vocẽ dorme.',
-                    imageUrl: '/images/samples/v1/guarantee/30-days.png',
+                    imageUrl: baseUrl + 'images/samples/v1/guarantee/30-days.png',
                 }
             },
         ]

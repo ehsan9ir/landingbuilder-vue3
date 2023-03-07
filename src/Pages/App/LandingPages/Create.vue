@@ -10,9 +10,9 @@
                     <div class="col-span-6">
                         <div class="form-control">
                             <label class="label">
-                                <span class="label-text">نام</span>
-                            </label> 
-                            <input v-model="form.name" type="text" placeholder="My awesome ebook" class="input input-bordered text-base">
+                                <span class="label-text">نامک</span>
+                            </label>
+                            <input v-model="form.name" dir="ltr" type="text" placeholder="slug" class="input input-bordered text-base text-left">
                         </div>
                     </div>
                     <div class="col-span-12 flex justify-end">

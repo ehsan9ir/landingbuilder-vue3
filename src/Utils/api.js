@@ -2,7 +2,14 @@ import axios from 'axios'
 
 axios.defaults.withCredentials = true
 axios.defaults.baseURL = import.meta.env.VITE_BACKEND_BASE_URL
-axios.defaults.headers.Authorization = 'Bearer ' + localStorage.getItem('ez_landingpage_token')
+
+setToken()
+function setToken() {
+    axios.defaults.headers.Authorization = 'Bearer ' + localStorage.getItem('ez_landingpage_token')
+}
+function removeToken() {
+    axios.defaults.headers.Authorization = ''
+}
 
 const Api = {
     fetchLandingPages: () => {
@@ -54,6 +61,7 @@ const Api = {
                         .then(response => {
                             if(response.status <= 204) {
                                 localStorage.setItem('ez_landingpage_token', response.data.plainTextToken)
+                                setToken()
                             }
 
                             log(response, 'POST - then - /login')
@@ -76,6 +84,7 @@ const Api = {
             axios.post('/lb/logout')
                 .then(response => {
                     localStorage.removeItem('ez_landingpage_token')
+                    removeToken()
                     log(response, 'POST - then - /logout')
                     resolve(response)
                 })
@@ -94,6 +103,7 @@ const Api = {
                         .then(response => {
                             if(response.status == 200) {
                                 localStorage.setItem('ez_landingpage_token', response.data.plainTextToken)
+                                setToken()
                             }
 
                             log(response, 'POST - then - /register')
@@ -128,6 +138,11 @@ function request(method, endpoint, data = null, raw = false) {
                     }
                 })
                 .catch(error => {
+
+                    if (error && error.response && error.response.status === 401) {
+                        Api.logout()
+                    }
+
                     log(error, 'GET - catch - ' + endpoint)
                     reject(error)
                 })
@@ -148,6 +163,11 @@ function request(method, endpoint, data = null, raw = false) {
                     }
                 })
                 .catch(error => {
+
+                    if (error && error.response && error.response.status === 401) {
+                        Api.logout()
+                    }
+
                     log(error, 'POST - catch - ' + endpoint)
                     reject(error)
                 })
@@ -168,6 +188,11 @@ function request(method, endpoint, data = null, raw = false) {
                     }
                 })
                 .catch(error => {
+
+                    if (error && error.response && error.response.status === 401) {
+                        Api.logout()
+                    }
+
                     log(error, 'PUT - catch - ' + endpoint)
                     reject(error)
                 })
@@ -188,6 +213,11 @@ function request(method, endpoint, data = null, raw = false) {
                     }
                 })
                 .catch(error => {
+
+                    if (error && error.response && error.response.status === 401) {
+                        Api.logout()
+                    }
+
                     log(error, 'DELETE - catch - ' + endpoint)
                     reject(error)
                 })
